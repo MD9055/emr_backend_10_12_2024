@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Record</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .header, .footer {
+            text-align: right;
+            font-size: 0.9em;
+        }
+        .content {
+            margin: 20px 0;
+        }
+        .section-title {
+            font-weight: bold;
+            width: 20%;
+            display: inline-block;
+        }
+        .note {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        .info {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .vitals, .meds {
+            margin-top: 10px;
+        }
+        .confidential {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .divflex {
+            display: flex;
+            margin-top: 21px;
+        }
+        .pTag {
+            text-align: center;
+            width: 100%;
+        }
+        .spanTag {
+            margin-left: 166px;
+        }
+        .spanTag2 {
+            margin-left: 77px;
+        }
+        .amazingChart {
+            margin: 0;
+            width: 90%;
+        }
+        .section-title2 {
+            font-weight: bold;
+            width: 27%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        Note: {{name}} (DOB: {{dob}} ID: 1292)
+    </div>
+
+    <div class="content">
+        <div class="info">
+            PRIMARY HEALTH AND WELLNESS CENTER, LLC<br>
+            9055 Chevrolet Drive<br>
+            Suite 103<br>
+            Ellicott City, MD 21042<br>
+            Phone 410 465 7850 &nbsp;&nbsp; Fax 410 465 3716
+        </div>
+
+        <div class="note">
+            <div style="background-color: #eee; padding: 6px; display: flex;">
+                <p class="amazingChart">{{name1}} (DOB: {{dob1}})</p>
+                <span style="width: 100%; text-align: right;">{{current_date}}</span>
+            </div>
+        </div>
+
+        <div class="divflex">
+            <div class="section-title">CC</div>
+            <span>{{chief_complaint}}</span>
+        </div>
+
+        <div class="divflex">
+            <div class="section-title">HPI</div>
+            <span class="spanTag">{{HPI}}</span>
+        </div>
+
+        <div class="divflex">
+            <div class="section-title">ROS</div>
+            <span>{{ROS}}</span>
+        </div>
+
+        <div class="divflex">
+            <div class="section-title">PMH</div>
+            <span>{{PMH}}</span>
+        </div>
+
+        <div class="divflex">
+            <div class="section-title">SH</div>
+            <span>{{social_history}}</span>
+        </div>
+
+        <div class="divflex">
+            <div class="section-title">FH</div>
+            <span>{{family_history}}</span>
+        </div>
+
+        <div class="divflex">
+            <div class="section-title">Allergies</div>
+            <span>{{Allergies}}</span>
+        </div>
+
+        <div class="divflex">
+            <div class="section-title">Meds</div>
+            <span>{{medication}}</span>
+        </div>
+
+        <div class="vitals divflex">
+            <div class="section-title">Vitals</div>
+            <span>BP: {{bp}} &nbsp;&nbsp; Pulse: {{pulse}} &nbsp;&nbsp; RR: {{RR}}</span>
+        </div>
+
+        <div class="divflex">
+            <div class="section-title">PE</div>
+            <span class="spanTag2">{{physical_exam}}</span>
+        </div>
+
+        <!-- <div class="confidential">
+            <div style="background-color: #eee; padding: 6px; display: flex;">
+                <p class="amazingChart">Amazing Charts</p>
+                <span style="width: 100%; text-align: right;">Page 1 of 2</span>
+            </div>
+
+            <p class="pTag">
+                <br>The information on this page is confidential.
+                <br>Any release of this information requires the written authorization of the patient listed above.
+            </p>
+        </div>
+
+        <div class="note">
+            <div style="background-color: #eee; padding: 6px; display: flex;">
+                <p class="amazingChart">SCHWARTZ, CATHERINE (DOB: 2/13/1958 ID: 1292)</p>
+                <span style="width: 100%; text-align: right;">Jul 13, 2018 Fri 12:07 PM</span>
+            </div>
+        </div> -->
+
+        <div class="divflex">
+            <div class="section-title2">A/P</div>
+            <span>{{a_p}}</span>
+        </div>
+
+        <div class="footer" style="text-align: left; margin-left: 75%; margin-top: 44px;">
+            <b>Electronically Signed By: MITUL DAVE, MD</b><br>
+            <p style="text-align: right; width: 100%; margin-top: 0;">7/13/18 5:28 PM</p>
+        </div>
+    </div>
+</body>
+</html>
